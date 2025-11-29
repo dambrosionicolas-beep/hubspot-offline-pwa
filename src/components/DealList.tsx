@@ -52,6 +52,7 @@ export function DealList() {
         (deal.pipeline && deal.pipeline.toLowerCase().includes(searchTerm.toLowerCase()))
     ) || [];
 
+    const totalPages = Math.ceil(filteredDeals.length / itemsPerPage);
     const paginatedDeals = filteredDeals.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
 
     return (
