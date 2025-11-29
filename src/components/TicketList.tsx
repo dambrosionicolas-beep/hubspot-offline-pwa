@@ -52,6 +52,7 @@ export function TicketList() {
         ticket.content.toLowerCase().includes(searchTerm.toLowerCase())
     ) || [];
 
+    const totalPages = Math.ceil(filteredTickets.length / itemsPerPage);
     const paginatedTickets = filteredTickets.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
 
     return (
