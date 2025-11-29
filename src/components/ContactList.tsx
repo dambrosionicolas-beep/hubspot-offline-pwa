@@ -54,7 +54,7 @@ export function ContactList() {
         contact.email.toLowerCase().includes(searchTerm.toLowerCase())
     ) || [];
 
-    const totalPages = Math.ceil(filteredContacts.length / itemsPerPage);
+    const _totalPages = Math.ceil(filteredContacts.length / itemsPerPage);
     const paginatedContacts = filteredContacts.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
 
     return (
