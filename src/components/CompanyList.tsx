@@ -53,7 +53,7 @@ export function CompanyList() {
         company.domain.toLowerCase().includes(searchTerm.toLowerCase())
     ) || [];
 
-    const totalPages = Math.ceil(filteredCompanies.length / itemsPerPage);
+    const _totalPages = Math.ceil(filteredCompanies.length / itemsPerPage);
     const paginatedCompanies = filteredCompanies.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
 
     return (
