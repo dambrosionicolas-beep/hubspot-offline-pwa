@@ -1,0 +1,12 @@
+{
+    "rewrites": [
+        {
+            "source": "/api/hubspot/:path*",
+            "destination": "https://api.hubapi.com/:path*"
+        },
+        {
+            "source": "/(.*)",
+            "destination": "/index.html"
+        }
+    ]
+}
